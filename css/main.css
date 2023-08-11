@@ -1,0 +1,48 @@
+.main-page {
+  background-color: #f4f4f4;
+}
+
+.services {
+  background-color: #888;
+}
+
+.portfolio {
+  background-color: #666;
+}
+
+.aboutus {
+  background-color: #444;
+}
+
+.contact {
+  background-color: #222;
+  color: #f4f4f4;
+  font-weight: lighter;
+}
+
+.main-page,
+.services,
+.portfolio,
+.aboutus,
+.contact {
+  padding: 60px;
+  position: relative;
+}
+
+.contact-flex {
+  display: block;
+}
+
+.detail::before {
+  content: "";
+  width: 4.5px;
+  height: 20px;
+  left: 52.5px;
+  background: linear-gradient(
+    180deg,
+    rgba(220, 99, 00, 1) 0%,
+    rgba(255, 51, 0, 1) 100%
+  );
+  position: absolute;
+  border-radius: 2px;
+}
