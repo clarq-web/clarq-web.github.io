@@ -71,6 +71,7 @@ img {
 .button:hover {
   border: #141414 solid 2px;
   background-color: #141414;
+  cursor: pointer;
 }
 
 .button:active {

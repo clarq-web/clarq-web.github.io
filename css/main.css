@@ -14,23 +14,12 @@
   background-color: #444;
 }
 
-.contact {
-  background-color: #222;
-  color: #f4f4f4;
-  font-weight: lighter;
-}
-
 .main-page,
 .services,
 .portfolio,
-.aboutus,
-.contact {
+.aboutus {
   padding: 60px;
   position: relative;
-}
-
-.contact-flex {
-  display: block;
 }
 
 .detail::before {
