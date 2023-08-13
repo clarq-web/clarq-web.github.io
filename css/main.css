@@ -1,18 +1,3 @@
-.main-page {
-  background-color: #f4f4f4;
-}
-
-.services {
-  background-color: #888;
-}
-
-.portfolio {
-  background-color: #666;
-}
-
-.aboutus {
-  background-color: #444;
-}
 
 .main-page,
 .services,
@@ -20,6 +5,8 @@
 .aboutus {
   padding: 60px;
   position: relative;
+  background-color: #f4f4f4;
+  color: #141414;
 }
 
 .detail::before {

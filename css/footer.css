@@ -1,6 +1,6 @@
 .footer {
-  background-color: #141414;
-  color: #f4f4f4;
+  background-color: #f4f4f4;
+  color: #141414;
   text-align: center !important;
   font-size: 1.12rem;
   padding: 7em 0 6em 0;
@@ -25,10 +25,9 @@
 
 .nmrs,
 .nicks {
-  font-family: "Roboto", sans-serif;
+  font-family: "Courier New", Courier, monospace;
 }
 
-.slogan,
-.icn {
+.slogan {
   padding-left: 30px;
 }
