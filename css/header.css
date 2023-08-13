@@ -7,8 +7,7 @@ img {
   justify-content: space-between;
   align-items: center;
   padding: 20px 80px 20px 40px;
-  background-color: #f4f4f4;
-  position: relative;
+  background-color: var(--fundo);
 }
 
 .left {
@@ -35,7 +34,6 @@ img {
   font-size: 1.6rem;
   margin-left: 15px;
   display: inline;
-  padding: 5px 5px 1px 5px;
 }
 
 .right a {
@@ -45,7 +43,7 @@ img {
 }
 
 .noncontac:hover {
-  color: #ff3300;
+  color: var(--cor-2);
 }
 
 .title {
@@ -53,31 +51,41 @@ img {
   align-items: center;
 }
 
+.title::before {
+  content: "";
+  font-size: 1.5rem;
+  text-align: center;
+  color: #141414;
+  background-image: url("/media/teste.svg");
+  width: 50px;
+  height: 50px;
+}
+
 .title h1 {
   font-size: 2.5rem;
 }
 
 .button {
-  border: #ff3300 solid 2px;
+  border: var(--cor-1) solid 2px;
   border-radius: 5px;
   transition: 0.3s;
-  background-color: #ff3300;
+  background-color: var(--cor-1);
 }
 
 .button a {
-  color: #f4f4f4;
+  color: var(--fundo);
   font-weight: lighter;
 }
 
 .button:hover {
-  border: #dc6300 solid 2px;
-  background-color: #dc6300;
+  border: var(--cor-2) solid 2px;
+  background-color: var(--cor-2);
   cursor: pointer;
 }
 
 .button:active {
-  border: #141414 solid 2px;
-  background-color: #141414;
+  border: var(--fonte) solid 1px;
+  background-color: var(--fonte);
 }
 
 .switch {
@@ -100,7 +108,7 @@ img {
   left: 0;
   right: 0;
   bottom: 0;
-  background-color:#141414;
+  background-color: #141414;
   -webkit-transition: 0.4s;
   transition: 0.4s;
   border-radius: 10px;
@@ -111,7 +119,7 @@ img {
   content: "";
   height: 26px;
   width: 26px;
-  background-image: url('/media/light.svg');
+  background-image: url("/media/light.svg");
   -webkit-transition: 0.4s;
   transition: 0.4s;
 }
@@ -128,5 +136,5 @@ input:checked + .slider:before {
   -webkit-transform: translateX(26px);
   -ms-transform: translateX(26px);
   transform: translateX(26px);
-  background-image: url('/media/dark.svg');
+  background-image: url("/media/dark.svg");
 }

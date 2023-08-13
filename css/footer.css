@@ -1,6 +1,6 @@
 .footer {
-  background-color: #f4f4f4;
-  color: #141414;
+  background-color: var(--fundo);
+  color: var(--fonte);
   text-align: center !important;
   font-size: 1.12rem;
   padding: 7em 0 6em 0;
@@ -16,7 +16,7 @@
 }
 
 .slogan strong {
-  color: #ff3300;
+  color: var(--cor-1);
 }
 
 .footer h4 {

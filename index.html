@@ -6,6 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Em progresso.">
   <link rel="stylesheet" href="/css/style.css">
+  <script src="/script.js" defer></script>
   <link rel="icon" href="/media/wgear.svg" type="image/svg+xml">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -14,10 +15,9 @@
 </head>
 
 <body>
-  <header class="header" id="header">
+  <header class="header spacing" id="header">
     <div class="left">
       <a href="/index.html" class="title">
-        <img src="/media/bgear.svg" alt="logo">
         <h1>
           {ForgeGenius_Tech}
         </h1>
@@ -28,7 +28,7 @@
         <nav class="navbar">
           <li>
             <label class="switch">
-              <input type="checkbox">
+              <input type="checkbox" id="mode-toggle">
               <span class="slider"></span>
             </label>
           </li>
@@ -40,7 +40,7 @@
       </ul>
     </div>
   </header>
-  <main class="main" id="main">
+  <main class="main spacing" id="main">
     <section class="main-page detail" id="main-page">
       <h1>PÁGINA INICIAL:</h1>
       Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perspiciatis in nostrum asperiores doloremque quaerat perferendis voluptatibus nemo dolore a, expedita architecto et corrupti. Quibusdam, eaque illum! Iusto totam officia consectetur.
@@ -58,12 +58,12 @@
       Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perspiciatis in nostrum asperiores doloremque quaerat perferendis voluptatibus nemo dolore a, expedita architecto et corrupti. Quibusdam, eaque illum! Iusto totam officia consectetur.
     </section>
   </main>
-  <footer class="footer" id="footer">
-    <div class="slogan">
+  <footer class="footer spacing" id="footer">
+    <div class="slogan spacing">
       <h1>
         Nós <strong>FORJAMOS</strong>.
       </h1>
-      <img src="/media/bgear.svg" alt="bgear" class="icn">
+      <img src="/media/teste.svg" alt="icon" class="icn">
     </div>
     <div class="fndrs">
       <h4>Fundadores</h4>

@@ -5,8 +5,8 @@
 .aboutus {
   padding: 60px;
   position: relative;
-  background-color: #f4f4f4;
-  color: #141414;
+  background-color: var(--fundo);
+  color: var(--fonte);
 }
 
 .detail::before {
