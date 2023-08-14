@@ -1,0 +1,14 @@
+:root {
+  --fundo: #f4f4f4;
+  --fonte: #141414;
+  --cor-1: #ff3300;
+  --cor-2: #dc6300;
+}
+
+.bck-drk {
+  background-color: #141414 !important;
+}
+
+.txt-drk {
+  color: #f4f4f4 !important;
+}
