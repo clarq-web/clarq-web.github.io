@@ -110,8 +110,8 @@ img {
   bottom: 0;
   background-color: #141414;
   -webkit-transition: 0.4s;
-  transition: 0.4s;
-  border-radius: 10px;
+  transition: 1s;
+  border-radius: 20px;
 }
 
 .slider:before {

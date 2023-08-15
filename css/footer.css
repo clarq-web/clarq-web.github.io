@@ -31,3 +31,9 @@
 .slogan {
   padding-left: 30px;
 }
+
+.subslogan {
+  font-size: 5.5rem;
+  color: #dc6300;
+  line-height: 1.2;
+}
