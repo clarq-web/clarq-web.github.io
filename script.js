@@ -3,6 +3,7 @@ const toggle = document.getElementById("mode-toggle");
 const nctc = document.querySelectorAll(".noncontac");
 const txt = document.querySelectorAll("h1, p, li, h4, h2");
 const bckgrnd = document.querySelectorAll("header, section, footer");
+const lg = document.querySelectorAll(".logo");
 
 toggle.addEventListener("change", function () {
     if (toggle.checked) {
@@ -15,6 +16,9 @@ toggle.addEventListener("change", function () {
       bckgrnd.forEach((element) => {
         element.classList.add("bck-drk");
       });
+      lg.forEach((element) => {
+        element.innerHTML = "<img src=/media/wlogo.svg alt=logoheader>";
+      });
     } else {
       nctc.forEach((element) => {
         element.classList.remove("txt-drk");
@@ -24,6 +28,10 @@ toggle.addEventListener("change", function () {
       });
       bckgrnd.forEach((element) => {
         element.classList.remove("bck-drk");
+      });
+      lg.forEach((element) => {
+        element.innerHTML = "";
+        element.innerHTML = "<img src=/media/blogo.svg alt=logoheader>";
       });
     }
 });

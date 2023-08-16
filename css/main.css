@@ -23,6 +23,7 @@
 }
 
 .services {
+  position: relative;
   display: grid;
   grid-template-columns: 400px auto;
   justify-items: center;
@@ -45,9 +46,9 @@
   width: 210px;
   height: 360px;
   position: relative;
-  border: 1px solid rgba(14, 14, 14, 1);
+  border: 1px solid #ff3300;
   border-radius: 20px;
-  margin-left: 10px;
+  margin-left: 20px;
 }
 
 .serv-box h2 {
@@ -63,7 +64,8 @@
 }
 
 .serv-box:hover {
-  box-shadow: 4px 4px 4px #141414;
+  border: 1px solid #dc6300;
+  box-shadow: 4px 4px 4px #dc6300;
   transition: 0.2s;
 }
 
@@ -73,6 +75,49 @@
   border: 1px solid #ff3300;
 }
 
-.serv-box p {
+.serv-box p, .soon p {
   margin: 20px;
+  font-size: .88rem;
+}
+
+.service-l{
+  z-index: 1;
+}
+
+.service-l::before{
+  content: "";
+  width: 300px;
+  height: 300px;
+  position: absolute;
+  background-image: url("/media/serv-det.svg");
+  z-index: -1;
+  top: 180px;
+  left: 190px;
+}
+
+.soon {
+  width: 210px;
+  height: 360px;
+  position: relative;
+  border-radius: 20px;
+}
+
+.soon .s-det::before{
+  content: "";
+  left: -5px;
+  top: 185px;
+  width: 10px;
+  height: 30px;
+  border-radius: 4px;
+  background-color: linear-gradient(
+    180deg,
+    rgba(14, 14,14, 1) 0%,
+    rgba(180, 180, 180, 1) 100%
+  );
+  position: absolute;
+  border-radius: 2px;
+}
+
+.soon h2, .soon p{
+  margin-left: 20px;
 }
