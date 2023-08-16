@@ -1,7 +1,7 @@
 //checkbox-toggle
 const toggle = document.getElementById("mode-toggle");
 const nctc = document.querySelectorAll(".noncontac");
-const txt = document.querySelectorAll("h1, p, li, h4");
+const txt = document.querySelectorAll("h1, p, li, h4, h2");
 const bckgrnd = document.querySelectorAll("header, section, footer");
 
 toggle.addEventListener("change", function () {

@@ -7,8 +7,10 @@
 
 .bck-drk {
   background-color: #141414 !important;
+  transition: 0.8s;
 }
 
 .txt-drk {
   color: #f4f4f4 !important;
+  transition: 0.8s;
 }

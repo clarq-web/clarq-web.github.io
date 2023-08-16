@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="50.892509mm"
+   height="54.333801mm"
+   viewBox="0 0 50.892509 54.333801"
+   version="1.1"
+   id="svg1"
+   inkscape:version="1.3 (0e150ed6c4, 2023-07-21)"
+   sodipodi:docname="inomeado.svg"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview1"
+     pagecolor="#505050"
+     bordercolor="#eeeeee"
+     borderopacity="1"
+     inkscape:showpageshadow="0"
+     inkscape:pageopacity="0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#505050"
+     inkscape:document-units="mm"
+     inkscape:zoom="1.4040232"
+     inkscape:cx="182.68928"
+     inkscape:cy="174.85466"
+     inkscape:window-width="1920"
+     inkscape:window-height="1001"
+     inkscape:window-x="-9"
+     inkscape:window-y="-9"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="layer1" />
+  <defs
+     id="defs1" />
+  <g
+     inkscape:label="Camada 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(-56.687335,-110.37669)">
+    <rect
+       style="fill:#d02400;fill-opacity:1;stroke-width:0.239321;stroke-linecap:square;stroke-linejoin:round;stroke-dasharray:0.478641, 0.239321"
+       id="rect6"
+       width="51.63435"
+       height="11.872133"
+       x="-31.364704"
+       y="148.1209"
+       inkscape:transform-center-x="1.0855423"
+       transform="rotate(-34.621037)"
+       inkscape:transform-center-y="0.74945812" />
+    <rect
+       style="fill:#e35700;fill-opacity:1;stroke-width:0.239321;stroke-linecap:square;stroke-linejoin:round;stroke-dasharray:0.478641, 0.239321"
+       id="rect6-4"
+       width="51.63435"
+       height="11.872133"
+       x="-41.379276"
+       y="159.71159"
+       inkscape:transform-center-x="1.0855423"
+       transform="rotate(-34.621037)"
+       inkscape:transform-center-y="0.74945812" />
+  </g>
+</svg>
