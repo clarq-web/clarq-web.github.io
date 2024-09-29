@@ -41,3 +41,27 @@ elementos.socialButtons.forEach(button => {
     window.location.href = button.getAttribute("data-href");
   });
 });
+
+// Salvar o estado do modo no cache
+function salvarEstadoModo(ativado) {
+  localStorage.setItem('modoDark', ativado);
+}
+
+// Carregar o estado do modo do cache
+function carregarEstadoModo() {
+  return localStorage.getItem('modoDark') === 'true';
+}
+
+// Inicializar o modo com base no cache
+document.addEventListener("DOMContentLoaded", () => {
+  const modoDarkAtivado = carregarEstadoModo();
+  toggle.checked = modoDarkAtivado;
+  alternarModo(modoDarkAtivado);
+});
+
+// Atualizar o cache quando o modo for alternado
+toggle.addEventListener("change", () => {
+  const ativado = toggle.checked;
+  alternarModo(ativado);
+  salvarEstadoModo(ativado);
+});
