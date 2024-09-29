@@ -1,24 +1,26 @@
+/* Estilos para o rodapé */
 .footer {
   background-color: var(--fundo);
   color: var(--fonte);
   font-size: 1.12rem;
   padding-top: 3em;
   display: grid;
-  grid-template-columns: repeat(3,1fr);
+  grid-template-columns: repeat(3, 1fr);
   justify-content: space-around;
   align-items: center;
   text-align: center;
 }
 
+/* Estilos para a seção de direitos autorais */
 .copyright {
   display: grid;
   justify-content: center;
   text-align: center;
   grid-column: span 3;
-  padding-top: 1em;
-  padding-bottom: 1em;
+  padding: 1em 0;
 }
 
+/* Estilos para o slogan */
 .slogan {
   font-weight: lighter;
   font-size: 4rem;
@@ -27,16 +29,19 @@
   padding-left: 30px;
 }
 
+/* Estilos para o texto em negrito dentro do slogan */
 .slogan strong {
   color: var(--cor-1);
 }
 
+/* Estilos para o subslogan */
 .subslogan {
   font-size: 5.5rem;
   color: #dc6300;
   line-height: 1.2;
 }
 
+/* Estilos para a seção de fundadores */
 .fndrs {
   display: flex;
   flex-direction: column;
@@ -47,11 +52,13 @@
   border-radius: 8px;
 }
 
+/* Estilos para o título dentro da seção de fundadores */
 .fndrs h4 {
   font-size: 3.5rem;
   margin-bottom: 0.5em;
 }
 
+/* Estilos para os números e apelidos */
 .nmrs,
 .nicks {
   font-family: "Courier New", Courier, monospace;
@@ -64,6 +71,7 @@
   border-radius: 4px;
 }
 
+/* Estilos para os números e apelidos ao passar o mouse */
 .nmrs:hover,
 .nicks:hover {
   color: var(--cor-2);
@@ -72,6 +80,7 @@
   transform: translateY(-2px);
 }
 
+/* Estilos para a linha horizontal */
 .hr_page {
   all: unset;
   height: 0.1rem;

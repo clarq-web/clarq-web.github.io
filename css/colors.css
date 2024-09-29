@@ -1,25 +1,32 @@
+/* Definição das variáveis de cores */
 :root {
-  --fundo: #f4f4f4;
-  --fonte: #141414;
-  --cor-1: #ff3300;
-  --cor-2: #dc6300;
+  --fundo: #f4f4f4; /* Cor de fundo padrão */
+  --fonte: #141414; /* Cor da fonte padrão */
+  --cor-1: #ff3300; /* Cor de destaque 1 */
+  --cor-2: #dc6300; /* Cor de destaque 2 */
 }
 
+/* Estilo para fundo escuro */
 .bck-drk {
-  background-color: #141414 !important;
-  transition: 0.8s;
+  background-color: var(
+    --fonte
+  ) !important; /* Usando a variável de cor da fonte */
+  transition: background-color 0.8s; /* Transição suave para a mudança de cor de fundo */
 }
 
+/* Estilo para texto escuro */
 .txt-drk {
-  color: #f4f4f4 !important;
-  transition: 0.8s;
+  color: var(--fundo) !important; /* Usando a variável de cor de fundo */
+  transition: color 0.8s; /* Transição suave para a mudança de cor do texto */
 }
 
+/* Estilo para botões sociais no modo claro */
 .social-button {
   color: #000000; /* Cor padrão para o modo claro */
   transition: color 0.3s ease; /* Transição suave da cor */
 }
 
+/* Estilo para botões sociais no modo escuro */
 .social-button-dark {
   color: #ffffff; /* Cor branca para o modo escuro */
 }
