@@ -6,7 +6,7 @@ body {
   display: grid;
   grid-template-columns: 1fr;
   font-family: "Bebas Neue", sans-serif;
-  margin: 0px;
+  margin: 0;
   color: var(--fonte);
 }
 
@@ -14,7 +14,7 @@ h1,
 h2,
 h3,
 p {
-  margin: 0px;
+  margin: 0;
 }
 
 ul {
