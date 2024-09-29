@@ -14,3 +14,12 @@
   color: #f4f4f4 !important;
   transition: 0.8s;
 }
+
+.social-button {
+  color: #000000; /* Cor padrão para o modo claro */
+  transition: color 0.3s ease; /* Transição suave da cor */
+}
+
+.social-button-dark {
+  color: #ffffff; /* Cor branca para o modo escuro */
+}
