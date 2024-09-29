@@ -10,9 +10,6 @@
 
 .detail::before {
   content: "";
-  width: 4.5px;
-  height: 20px;
-  left: 52.5px;
   background: linear-gradient(
     180deg,
     rgba(220, 99, 00, 1) 0%,
@@ -25,13 +22,31 @@
 .services {
   position: relative;
   display: grid;
-  grid-template-columns: 400px auto;
+  grid-template-columns: 20rem auto;
+  justify-items: center;
+  justify-content: space-between;
+}
+.portfolio {
+  position: relative;
+  display: grid;
+  grid-template-columns: auto 25rem;
   justify-items: center;
   justify-content: space-between;
 }
 
-.services h1 {
-  font-size: 15rem;
+.aboutus {
+  position: relative;
+  display: grid;
+  grid-template-columns: 30rem auto;
+  justify-items: center;
+  justify-content: space-between;
+}
+
+.services h1,
+.aboutus h1,
+.portfolio h1
+{
+  font-size: 12rem;
   word-break: break-all;
   line-height: 0.8;
 }
@@ -69,30 +84,64 @@
   transition: 0.2s;
 }
 
-.serv-box:active{
+.serv-box:active {
   box-shadow: 2px 2px 2px #ff3300;
   transition: 0.2s;
   border: 1px solid #ff3300;
 }
 
-.serv-box p, .soon p {
+.serv-box p,
+.soon p {
   margin: 20px;
-  font-size: .88rem;
+  font-size: 0.88rem;
 }
 
-.service-l{
+.service-l,
+.prt-r,
+.abt-l {
   z-index: 1;
 }
 
-.service-l::before{
+.abt-r{
+  position: relative;
+  width: 70rem;
+  height: 2rem;
+  text-align: justify;
+  font-size: 1.5rem;
+  top: 4rem;
+}
+
+.service-l::before {
   content: "";
-  width: 300px;
-  height: 300px;
+  width: 18.75rem;
+  height: 18.75rem;
   position: absolute;
   background-image: url("/media/serv-det.svg");
   z-index: -1;
-  top: 180px;
-  left: 190px;
+  top: 8rem;
+  left: 0.78em;
+}
+
+.prt-r::before {
+  content: "";
+  width: 18.75rem;
+  height: 18.75rem;
+  position: absolute;
+  background-image: url("/media/serv-det-inv.svg");
+  z-index: -1;
+  top: 9rem;
+  left: 7.048em;
+}
+
+.abt-l::before {
+  content: "";
+  width: 18.75rem;
+  height: 18.75rem;
+  position: absolute;
+  background-image: url("/media/serv-det.svg");
+  z-index: -1;
+  top: 8rem;
+  left: 0.78em;
 }
 
 .soon {
@@ -102,7 +151,7 @@
   border-radius: 20px;
 }
 
-.soon .s-det::before{
+.soon .s-det::before {
   content: "";
   left: -5px;
   top: 185px;
@@ -111,13 +160,19 @@
   border-radius: 4px;
   background-color: linear-gradient(
     180deg,
-    rgba(14, 14,14, 1) 0%,
+    rgba(14, 14, 14, 1) 0%,
     rgba(180, 180, 180, 1) 100%
   );
   position: absolute;
   border-radius: 2px;
 }
 
-.soon h2, .soon p{
+.soon h2,
+.soon p {
   margin-left: 20px;
 }
+
+.aboutus h1{
+  line-height: 0.87em;
+}
+
