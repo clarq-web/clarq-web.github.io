@@ -1,0 +1,51 @@
+:root {
+  /* Define a rolagem suave para toda a página */
+  scroll-behavior: smooth !important;
+}
+
+body {
+  /* Define o layout do corpo como grid com uma coluna */
+  display: grid;
+  grid-template-columns: 1fr;
+  /* Define a fonte padrão do corpo */
+  font-family: "Bebas Neue", sans-serif;
+  /* Remove a margem padrão do corpo */
+  margin: 0;
+  /* Define a cor do texto usando uma variável CSS */
+  color: var(--fonte);
+}
+
+h1,
+h2,
+h3,
+p {
+  /* Remove a margem padrão dos títulos e parágrafos */
+  margin: 0;
+}
+
+ul {
+  /* Remove a margem e o preenchimento padrão das listas não ordenadas */
+  margin: 0;
+  padding: 0;
+  /* Remove os marcadores de lista */
+  list-style: none;
+}
+
+img {
+  /* Define a largura máxima das imagens para 100% do contêiner pai */
+  max-width: 100%;
+  /* Define o display das imagens como bloco */
+  display: block;
+}
+
+a {
+  /* Remove a decoração de texto dos links */
+  text-decoration: none;
+  /* Define a cor do texto dos links usando uma variável CSS */
+  color: var(--fonte);
+}
+
+.spacing {
+  /* Adiciona espaçamento entre letras */
+  letter-spacing: 0.05rem;
+}

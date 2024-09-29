@@ -1,0 +1,106 @@
+{% load static %}
+{% load i18n %}
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <!-- Metadados e links para estilos e scripts -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Em progresso.">
+  <link rel="stylesheet" href="{% static 'css/style.css' %}">
+  <script src="{% static 'js/script.js' %}" defer></script>
+  <link rel="icon" href="{% static 'assets/serv-det.svg' %}" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Roboto&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <title>{% block title %}ForgeGenius_Tech{% endblock %}</title>
+</head>
+
+<body>
+  {% include "partials/header.html" %}
+  <hr class="hr_page" />
+
+  <!-- Conteúdo principal -->
+  <main class="main spacing" id="main">
+    <hr class="hr_page" />
+
+    <!-- Seção de Serviços -->
+    <section class="services" id="services">
+      <h1 class="service-l">{% trans "SERVIÇOS" %}</h1>
+      <ul class="service-r">
+        <li class="serv-box">
+          <a href="/">
+            <img src="{% static 'assets/api.svg' %}">
+            <h2 class="detail">
+              {% trans "API" %}
+            </h2>
+            <p>
+              {% trans "APIs <strong style='color: #ff3300'>forjadas</strong> para otimizar o desempenho e a eficiência da sua empresa." %}
+            </p>
+          </a>
+        </li>
+        <li class="serv-box">
+          <a href="/">
+            <img src="{% static 'assets/pnt.svg' %}">
+            <h2 class="detail">
+              {% trans "Sites" %}
+            </h2>
+            <p>
+              {% trans "Sites <strong style='color: #ff3300'>forjados</strong> para impulsionar seu negócio, proporcionando a melhor experiência ao usuário." %}
+            </p>
+          </a>
+        </li>
+        <li class="soon">
+          <img src="{% static 'assets/tbc.svg' %}">
+          <h2 class="s-det">
+            {% trans "Em breve..." %}
+          </h2>
+          <p>
+            {% trans "Ainda em progresso..." %}
+          </p>
+        </li>
+      </ul>
+    </section>
+    <hr class="hr_page" />
+
+    <!-- Seção de Portfólio -->
+    <section class="portfolio" id="portfolio">
+      <div class="prt-l service-r">
+        <div class="serv-box">
+      {% for projeto in projetos %}
+        <img src="{{ projeto.img.url }}">
+        <h2 class="detail">{{ projeto.nome }}</h2>
+        <p>{{ projeto.resumo }}</p>
+      {% empty %}
+        <p id='no-project'>{% trans "Sem Projetos" %}</p>
+      {% endfor %}
+        </div>
+      </div>
+      <h1 class="prt-r">{% trans "PORTFÓLIO" %}</h1>
+    </section>
+    <hr class="hr_page" />
+
+    <!-- Seção Sobre Nós -->
+    <section class="aboutus" id="aboutus">
+      <h1 class="abt-l">{% trans "SOBRE NÓS" %}</h1>
+      <p class="abt-r">
+        {% blocktrans trimmed %}
+        Na <strong style="color: #ff3300">ForgeGenius_Tech</strong>, somos apaixonados por transformar ideias em
+        realidade digital. Assim como os mestres ferreiros da antiguidade, <strong style="color: #ff3300">forjamos</strong> cada projeto com precisão, dedicação
+        e um toque de arte. Nossa missão é criar soluções tecnológicas que não apenas atendam às necessidades dos nossos clientes, mas que também superem suas
+        expectativas. Com uma equipe composta por um desenvolvedor full stack e um especialista em front-end, utilizamos
+        as ferramentas mais avançadas para moldar, temperar e polir cada linha de código, garantindo produtos finais
+        robustos, eficientes e visualmente impressionantes. Junte-se a nós e veja suas ideias ganharem vida com a força
+        e a beleza de uma obra-prima <strong style="color: #ff3300">forjada</strong>.
+        {% endblocktrans %}
+      </p>
+    </section>
+  </main>
+  <hr class="hr_page" />
+
+ {% include "partials/footer.html" %}
+</body>
+
+</html>

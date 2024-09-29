@@ -1,0 +1,35 @@
+{% load static %}  
+<!-- Cabeçalho do site -->
+  <header class="header spacing" id="header">
+    <div class="left">
+      <a href="{% url "home" %}" class="title">
+        <div class="logo">
+          <img src="{% static "/assets/blogo.svg" %}" alt="logoheader">
+        </div>
+        <h1>
+          {ForgeGenius_Tech}
+        </h1>
+      </a>
+    </div>
+    <div class="right">
+      <ul class="menu">
+        <nav class="navbar">
+          <!-- Alternador de modo (ex: claro/escuro) -->
+          <li>
+            <label class="switch">
+              <input type="checkbox" id="mode-toggle">
+              <span class="slider round">
+                <i class="fas fa-sun"></i>
+                <i class="fas fa-moon"></i>
+              </span>
+            </label>
+          </li>
+          <!-- Links de navegação -->
+          <li><a href="#services" class="noncontac">Serviços</a></li>
+          <li><a href="#portfolio" class="noncontac">Portfólio</a></li>
+          <li><a href="#aboutus" class="noncontac">Sobre Nós</a></li>
+          <li class="button"><a href="#footer">Contato</a></li>
+        </nav>
+      </ul>
+    </div>
+  </header>
