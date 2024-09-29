@@ -10,9 +10,11 @@
   align-items: center;
 }
 
-.copyright{
+.copyright {
   display: grid;
   justify-content: center;
+  text-align: center;
+  grid-column: span 3;
 }
 
 .slogan {
