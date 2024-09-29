@@ -52,6 +52,7 @@
   border-radius: 5px;
   transition: 0.3s;
   background-color: var(--cor-1);
+  padding: 0.5rem 0.5rem 0.3rem 0.5rem;
 }
 
 .button a {
