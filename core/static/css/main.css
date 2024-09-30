@@ -217,3 +217,60 @@
   font-size: 2rem;
   color: var(--fonte);
 }
+
+/* Estilos para a classe serv-box dentro de portfolio */
+.portfolio .serv-box {
+  width: 280px;
+  height: 420px;
+  position: relative;
+  border: 2px solid var(--cor-1);
+  border-radius: 25px;
+  margin: 25px;
+  padding: 20px;
+  background-color: rgba(255, 255, 255, 0.05);
+  transition: all 0.4s ease;
+  overflow: hidden;
+}
+
+.portfolio .serv-box img {
+  max-width: 100%;
+  max-height: 200px;
+  object-fit: cover;
+  border-radius: 15px;
+  margin-bottom: 15px;
+}
+
+.portfolio .serv-box:hover {
+  transform: translateY(-15px) scale(1.03);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+}
+
+.portfolio .serv-box h2 {
+  margin: 0 0 15px 0;
+  font-size: 1.8rem;
+  color: var(--cor-1);
+  text-align: center;
+}
+
+.portfolio .serv-box p {
+  margin: 0;
+  font-size: 1.1rem;
+  line-height: 1.6;
+  text-align: justify;
+}
+
+.portfolio .serv-box::after {
+  content: "";
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  right: 20px;
+  height: 2px;
+  background: linear-gradient(to right, var(--cor-1), var(--cor-2));
+  transform: scaleX(0);
+  transition: transform 0.4s ease;
+}
+
+.portfolio .serv-box:hover::after {
+  transform: scaleX(1);
+}

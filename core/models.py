@@ -6,3 +6,6 @@ class Projeto(models.Model):
     resumo = models.CharField(max_length=20)
     link = models.URLField()
     img = models.ImageField(upload_to='projetos/%Y/%m', null=True, blank=True)
+
+    def __str__(self):
+        return self.nome
