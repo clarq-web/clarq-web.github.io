@@ -32,7 +32,7 @@
 /* Estilos específicos para a seção de portfólio */
 .portfolio {
   display: grid;
-  grid-template-columns: auto 25rem;
+  grid-template-columns: auto 24rem;
   justify-items: center;
   justify-content: space-between;
 }
