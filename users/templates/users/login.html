@@ -1,0 +1,70 @@
+{% load static %} {% load i18n %}
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Página de login administrativo do Forge Genius." />
+    <link rel="stylesheet" href="{% static 'css/login.css' %}" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <title>{% trans "Login Administrativo - Forge Genius" %}</title>
+  </head>
+
+  <body>
+    <header>
+      <h1 class="logo">Forge Genius</h1>
+    </header>
+    
+    <main class="main" id="main">
+      <section id="login" class="login-section">
+        <h2 class="login-title">{% trans "Login Administrativo" %}</h2>
+        <form action="" method="post" class="login-form">
+          {% csrf_token %}
+          <div class="form-group">
+            <label for="username" class="form-label"
+              >{% trans "Nome de usuário" %}:</label
+            >
+            <input
+              type="text"
+              id="username"
+              name="username"
+              required
+              class="form-input"
+            />
+          </div>
+          <div class="form-group">
+            <label for="password" class="form-label"
+              >{% trans "Senha" %}:</label
+            >
+            <input
+              type="password"
+              id="password"
+              name="password"
+              required
+              class="form-input"
+            />
+          </div>
+          <button type="submit" class="submit-button">
+            {% trans "Entrar" %}
+          </button>
+        </form>
+      <div class="warning-message">
+        <p class="alert-text">Atenção: Caso tenha chegado aqui por engano, saia imediatamente.</p>
+        <p class="threat-text">Caso tente fazer login, seu endereço IP será registrado. Atividades suspeitas serão investigadas.</p>
+        <p class="consequence-text">Tentativas persistentes resultarão em ações legais imediatas.</p>
+        <a href="{% url 'home' %}" class="escape-button">{% trans "Abandonar Tentativa" %}</a>
+      </div>
+      </section>
+    </main>
+    
+    <footer class="footer">
+      <p class="footer-text">© {% now "Y" %} Forge Genius. Todos os direitos reservados.</p>
+      <p class="footer-text">Acesso Administrativo</p>
+    </footer>
+  </body>
+</html>

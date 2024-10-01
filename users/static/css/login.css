@@ -1,0 +1,303 @@
+/* Importação de estilos globais */
+@import "../../core/static/css/global.css";
+@import "../../core/static/css/colors.css";
+@import "../../core/static/css/main.css";
+
+/* Estilos para o corpo da página */
+body {
+  font-family: "Roboto", Arial, sans-serif;
+  background: linear-gradient(135deg, #f5f5f5, #e0e0e0);
+  color: #333;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* Estilos para o cabeçalho */
+header {
+  background: linear-gradient(90deg, #ff6b00, #ff8c00);
+  padding: 1.5em;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+header::before {
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle, rgba(255,255,255,0.2) 0%, rgba(255,255,255,0) 70%);
+  transform: rotate(30deg);
+  pointer-events: none;
+}
+
+.logo {
+  color: #fff;
+  margin: 0;
+  font-size: 2.5rem;
+  font-weight: 700;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+  position: relative;
+  z-index: 1;
+}
+
+/* Estilos para o conteúdo principal */
+.main {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 3em;
+}
+
+.login-section {
+  background: #fff;
+  padding: 3em;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  max-width: 450px;
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+}
+
+.login-section::before {
+  content: "";
+  position: absolute;
+  top: -10px;
+  left: -10px;
+  right: -10px;
+  height: 10px;
+  background: linear-gradient(90deg, #ff6b00, #ff8c00);
+  border-radius: 10px 10px 0 0;
+}
+
+.login-title {
+  color: #ff6b00;
+  margin-bottom: 1.5em;
+  font-size: 2.2rem;
+  text-align: center;
+  position: relative;
+}
+
+.login-title::after {
+  content: "";
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 50px;
+  height: 3px;
+  background: linear-gradient(90deg, #ff6b00, #ff8c00);
+}
+
+.login-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group {
+  margin-bottom: 1.5em;
+  position: relative;
+}
+
+.form-label {
+  display: block;
+  margin-bottom: 0.7em;
+  color: #333;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.form-input {
+  width: 100%;
+  padding: 0.8em;
+  border: 2px solid #e0e0e0;
+  border-radius: 6px;
+  background-color: #f5f5f5;
+  color: #333;
+  transition: all 0.3s ease;
+}
+
+.form-input:focus {
+  outline: none;
+  border-color: #ff6b00;
+  box-shadow: 0 0 0 3px rgba(255, 107, 0, 0.2);
+}
+
+.form-input:focus + .form-label {
+  color: #ff6b00;
+  transform: translateY(-25px);
+  font-size: 0.9em;
+}
+
+.submit-button {
+  background: linear-gradient(90deg, #ff6b00, #ff8c00);
+  color: #fff;
+  border: none;
+  padding: 0.8em 1.5em;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-weight: 600;
+  font-size: 1.1rem;
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+}
+
+.submit-button::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, rgba(255,255,255,0.1), rgba(255,255,255,0.3));
+  transition: all 0.3s ease;
+}
+
+.submit-button:hover::before {
+  left: 100%;
+}
+
+.submit-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 15px rgba(255, 107, 0, 0.3);
+}
+
+/* Estilos para o rodapé */
+.footer {
+  background: #333;
+  color: #fff;
+  text-align: center;
+  padding: 1.5em;
+  margin-top: auto;
+}
+
+.footer-text {
+  font-size: 0.9rem;
+  margin: 0.5em 0;
+  opacity: 0.8;
+}
+
+/* Estilos responsivos */
+@media (max-width: 600px) {
+  .login-section {
+    padding: 2em;
+  }
+
+  .logo {
+    font-size: 2rem;
+  }
+
+  header {
+    padding: 1em;
+  }
+}
+
+/* Estilos para a mensagem de aviso */
+.warning-message {
+  background: linear-gradient(135deg, #ff6b00, #ff8c00);
+  border: none;
+  border-radius: 8px;
+  padding: 1.5em;
+  margin-top: 2em;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.warning-message::before {
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle, rgba(255,255,255,0.2) 0%, rgba(255,255,255,0) 70%);
+  transform: rotate(30deg);
+  pointer-events: none;
+}
+
+.alert-text {
+  color: #fff;
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-bottom: 1em;
+  text-shadow: 1px 1px 2px rgba(0,0,0,0.3);
+  position: relative;
+  z-index: 1;
+}
+
+.threat-text,
+.consequence-text {
+  color: rgba(255,255,255,0.9);
+  font-size: 1rem;
+  margin-bottom: 0.8em;
+  position: relative;
+  z-index: 1;
+}
+
+.escape-button {
+  display: inline-block;
+  background: #333;
+  color: #fff;
+  text-decoration: none;
+  padding: 0.8em 1.5em;
+  border-radius: 6px;
+  font-weight: 600;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+  margin-top: 1em;
+  position: relative;
+  overflow: hidden;
+}
+
+.escape-button::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, rgba(255,255,255,0.1), rgba(255,255,255,0.3));
+  transition: all 0.3s ease;
+}
+
+.escape-button:hover::before {
+  left: 100%;
+}
+
+.escape-button:hover {
+  background: #444;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+/* Estilos responsivos para a mensagem de aviso */
+@media (max-width: 600px) {
+  .warning-message {
+    padding: 1em;
+  }
+
+  .alert-text {
+    font-size: 1.1rem;
+  }
+
+  .threat-text,
+  .consequence-text {
+    font-size: 0.9rem;
+  }
+
+  .escape-button {
+    font-size: 0.9rem;
+    padding: 0.7em 1.3em;
+  }
+}
