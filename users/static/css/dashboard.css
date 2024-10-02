@@ -1,0 +1,205 @@
+/* Importação de estilos globais */
+@import "../../core/static/css/global.css";
+@import "../../core/static/css/colors.css";
+@import "../../core/static/css/main.css";
+
+/* Estilos para o corpo da página */
+.dashboard-body {
+  font-family: "Roboto", Arial, sans-serif;
+  background: linear-gradient(135deg, #f4f4f4, #e0e0e0);
+  color: #333;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* Estilos para o cabeçalho */
+.dashboard-header {
+  background: linear-gradient(90deg, #ff6b00, #ff8c00);
+  padding: 1.5em;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.dashboard-header::before {
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(
+    circle,
+    rgba(255, 255, 255, 0.2) 0%,
+    rgba(255, 255, 255, 0) 70%
+  );
+  transform: rotate(30deg);
+  pointer-events: none;
+}
+
+.dashboard-title {
+  color: #fff;
+  margin: 0;
+  font-size: 2.5rem;
+  font-weight: 700;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+  position: relative;
+  z-index: 1;
+}
+
+/* Estilos para a navegação */
+.dashboard-nav {
+  margin-top: 1em;
+}
+
+.nav-list {
+  list-style-type: none;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+}
+
+.nav-item {
+  margin: 0 1em;
+}
+
+.nav-link {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.nav-link:hover {
+  color: #333;
+}
+
+/* Estilos para o conteúdo principal */
+.dashboard-main {
+  flex: 1;
+  padding: 3em;
+}
+
+.dashboard-section {
+  background: #fff;
+  padding: 2em;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  margin-bottom: 2em;
+}
+
+.section-title {
+  color: #ff6b00;
+  margin-bottom: 1em;
+  font-size: 1.8rem;
+}
+
+/* Estilos para a tabela de postagens */
+.posts-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.table-header {
+  background: #f4f4f4;
+  padding: 1em;
+  text-align: left;
+}
+
+.table-row:nth-child(even) {
+  background: #f9f9f9;
+}
+
+.table-cell {
+  padding: 1em;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.btn {
+  display: inline-block;
+  padding: 0.5em 1em;
+  border-radius: 4px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.btn-primary {
+  background: linear-gradient(90deg, #ff6b00, #ff8c00);
+  color: #fff;
+}
+
+.btn-small {
+  font-size: 0.9em;
+  padding: 0.3em 0.8em;
+}
+
+.btn-edit {
+  background: #4CAF50;
+  color: #fff;
+}
+
+.btn-danger {
+  background: #f44336;
+  color: #fff;
+}
+
+/* Estilos para as métricas */
+.metric-cards {
+  display: flex;
+  justify-content: space-between;
+}
+
+.metric-card {
+  background: #fff;
+  padding: 1.5em;
+  border-radius: 8px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  flex: 1;
+  margin: 0 1em;
+  text-align: center;
+}
+
+.metric-title {
+  color: #ff6b00;
+  margin-bottom: 0.5em;
+}
+
+.metric-value {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #333;
+}
+
+/* Estilos para o rodapé */
+.dashboard-footer {
+  background: #333;
+  color: #fff;
+  text-align: center;
+  padding: 1.5em;
+  margin-top: auto;
+}
+
+.footer-text {
+  font-size: 0.9rem;
+  margin: 0.5em 0;
+  opacity: 0.8;
+}
+
+/* Estilos responsivos */
+@media (max-width: 768px) {
+  .dashboard-main {
+    padding: 1.5em;
+  }
+
+  .metric-cards {
+    flex-direction: column;
+  }
+
+  .metric-card {
+    margin: 1em 0;
+  }
+}

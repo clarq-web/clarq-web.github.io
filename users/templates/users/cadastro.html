@@ -1,0 +1,85 @@
+{% load static %} {% load i18n %}
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Página de cadastro do Forge Genius." />
+    <link rel="stylesheet" href="{% static 'css/cadastro.css' %}" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <title>{% trans "Cadastro" %}</title>
+  </head>
+
+  <body>
+    <header>
+      <h1 class="logo">Forge Genius</h1>
+    </header>
+    
+    <main class="main" id="main">
+      <section id="cadastro" class="cadastro-section">
+        <h2 class="cadastro-title">{% trans "Cadastrar novo Usuario" %}</h2>
+        <div class="admin-message">
+          <p class="warning-text">
+            {% trans "Atenção: Se você é um administrador, você pode cadastrar um novo usuário apenas se ele fizer parte da equipe Forge Genius." %}
+          </p>
+          <p class="info-text">
+            {% trans "O cadastro de usuários não autorizados é estritamente proibido e pode resultar em consequências administrativas." %}
+          </p>
+        </div>
+        <form action="" method="post" class="cadastro-form">
+          {% csrf_token %}
+          <div class="form-group">
+            <label for="username" class="form-label">{% trans "Nome de usuário" %}:</label>
+            <input
+              type="text"
+              id="username"
+              name="username"
+              required
+              class="form-input"
+            />
+          </div>
+          <div class="form-group">
+            <label for="email" class="form-label">{% trans "E-mail" %}:</label>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              required
+              class="form-input"
+            />
+          </div>
+          <div class="form-group">
+            <label for="password" class="form-label">{% trans "Senha" %}:</label>
+            <input
+              type="password"
+              id="password"
+              name="password"
+              required
+              class="form-input"
+            />
+          </div>
+          <button type="submit" class="submit-button">
+            {% trans "Cadastrar" %}
+          </button>
+        </form>
+        {% if messages %}
+          <div class="messages">
+            {% for message in messages %}
+              <p class="{{ message.tags }}">{{ message }}</p>
+            {% endfor %}
+          </div>
+        {% endif %}
+      </section>
+    </main>
+    
+    <footer class="footer">
+      <p class="footer-text">© {% now "Y" %} Forge Genius. Todos os direitos reservados.</p>
+      <p class="footer-text">{% trans "Já tem uma conta?" %} <a href="{% url 'login' %}">{% trans "Faça login" %}</a></p>
+    </footer>
+  </body>
+</html>

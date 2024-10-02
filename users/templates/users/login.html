@@ -12,7 +12,7 @@
       href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"
       rel="stylesheet"
     />
-    <title>{% trans "Login Administrativo - Forge Genius" %}</title>
+    <title>{{ title }}</title>
   </head>
 
   <body>
@@ -22,12 +22,12 @@
     
     <main class="main" id="main">
       <section id="login" class="login-section">
-        <h2 class="login-title">{% trans "Login Administrativo" %}</h2>
+        <h2 class="login-title">{{ title }}</h2>
         <form action="" method="post" class="login-form">
           {% csrf_token %}
           <div class="form-group">
             <label for="username" class="form-label"
-              >{% trans "Nome de usuário" %}:</label
+              >Nome de usuário:</label
             >
             <input
               type="text"
@@ -54,9 +54,9 @@
           </button>
         </form>
       <div class="warning-message">
-        <p class="alert-text">Atenção: Caso tenha chegado aqui por engano, saia imediatamente.</p>
-        <p class="threat-text">Caso tente fazer login, seu endereço IP será registrado. Atividades suspeitas serão investigadas.</p>
-        <p class="consequence-text">Tentativas persistentes resultarão em ações legais imediatas.</p>
+        <p class="alert-text">{{ warning_message }}</p>
+        <p class="threat-text">{{ threat_message }}</p>
+        <p class="consequence-text">{{ consequence_message }}</p>
         <a href="{% url 'home' %}" class="escape-button">{% trans "Abandonar Tentativa" %}</a>
       </div>
       </section>

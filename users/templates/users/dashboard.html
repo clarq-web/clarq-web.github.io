@@ -1,0 +1,69 @@
+{% load static %}
+{% load i18n %}
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% trans "Painel de Controle" %}</title>
+    <link rel="stylesheet" href="{% static 'css/dashboard.css' %}">
+</head>
+<body class="dashboard-body">
+    <header class="dashboard-header">
+        <h1 class="dashboard-title">{% trans "Painel de Controle" %}</h1>
+        <nav class="dashboard-nav">
+            <ul class="nav-list">
+                <li class="nav-item"><a href="#posts" class="nav-link">{% trans "Postagens" %}</a></li>
+                <li class="nav-item"><a href="#metrics" class="nav-link">{% trans "Métricas" %}</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="dashboard-main">
+        <section id="posts" class="dashboard-section posts-section">
+            <h2 class="section-title">{% trans "Gerenciar Postagens" %}</h2>
+            <a href="{% url 'create_post' %}" class="btn btn-primary">{% trans "Nova Postagem" %}</a>
+            
+            <table class="posts-table">
+                <thead>
+                    <tr>
+                        <th class="table-header">{% trans "Título" %}</th>
+                        <th class="table-header">{% trans "Data" %}</th>
+                        <th class="table-header">{% trans "Ações" %}</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for post in posts %}
+                    <tr class="table-row">
+                        <td class="table-cell">{{ post.title }}</td>
+                        <td class="table-cell">{{ post.created_at|date:"d/m/Y" }}</td>
+                    </tr>
+                    {% empty %}
+                    <tr class="table-row">
+                        <td colspan="3" class="table-cell empty-message">{% trans "Nenhuma postagem encontrada." %}</td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </section>
+
+        <section id="metrics" class="dashboard-section metrics-section">
+            <h2 class="section-title">{% trans "Métricas" %}</h2>
+            <div class="metric-cards">
+                <div class="metric-card">
+                    <h3 class="metric-title">{% trans "Total de Postagens" %}</h3>
+                    <p class="metric-value">{{ total_posts }}</p>
+                </div>
+                <div class="metric-card">
+                    <h3 class="metric-title">{% trans "Visualizações Totais" %}</h3>
+                    <p class="metric-value">{{ total_views }}</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="dashboard-footer">
+        <p class="footer-text">&copy; {% now "Y" %} Forge Genius. {% trans "Todos os direitos reservados." %}</p>
+    </footer>
+</body>
+</html>

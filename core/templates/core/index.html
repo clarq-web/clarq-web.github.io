@@ -36,35 +36,35 @@
 
       <!-- Seção de Serviços -->
       <section class="services" id="services">
-        <h1 class="service-l">{% trans "SERVIÇOS" %}</h1>
+        <h1 class="service-l">SERVIÇOS</h1>
         <ul class="service-r">
           <li class="serv-box">
             <a href="/">
               <img src="{% static 'assets/api.svg' %}" />
-              <h2 class="detail">{% trans "API" %}</h2>
+              <h2 class="detail"> API</h2>
               <p>
-                {% trans "APIs
+                 APIs
                 <strong style="color: #ff3300">forjadas</strong> para otimizar o
-                desempenho e a eficiência da sua empresa." %}
+                desempenho e a eficiência da sua empresa.
               </p>
             </a>
           </li>
           <li class="serv-box">
             <a href="/">
               <img src="{% static 'assets/pnt.svg' %}" />
-              <h2 class="detail">{% trans "Sites" %}</h2>
+              <h2 class="detail"> "Sites" %}</h2>
               <p>
-                {% trans "Sites
+                 Sites
                 <strong style="color: #ff3300">forjados</strong> para
                 impulsionar seu negócio, proporcionando a melhor experiência ao
-                usuário." %}
+                usuário.
               </p>
             </a>
           </li>
           <li class="soon">
             <img src="{% static 'assets/tbc.svg' %}" />
-            <h2 class="s-det">{% trans "Em breve..." %}</h2>
-            <p>{% trans "Ainda em progresso..." %}</p>
+            <h2 class="s-det"> Em breve...</h2>
+            <p> Ainda em progresso...</p>
           </li>
         </ul>
       </section>
@@ -76,22 +76,23 @@
           {% for projeto in projetos %}
           <a href="{{ projeto.link }}">
             <div class="serv-box">
-              <img src="{{ projeto.img.url }}" alt="{{ projeto.nome }}" />
-              <h2 class="detail">{{ projeto.nome }}</h2>
-              <p>{{ projeto.resumo }}</p>
+              <img src="{{ projeto.image.url }}" alt="{{ projeto.title }}" />
+              <h2 class="detail">{{ projeto.title }}</h2>
+              <p>{{ projeto.content }}</p>
+                <p style='color:gray;'>{{ projeto.created_at|date:"d/m/Y" }}</p>
             </div>
           </a>
           {% empty %}
-          <p id="no-project">{% trans "Sem Projetos" %}</p>
+          <p id="no-project"> Sem Projetos</p>
           {% endfor %}
         </div>
-        <h1 class="prt-r">{% trans "PORTFÓLIO" %}</h1>
+        <h1 class="prt-r"> PORTFÓLIO</h1>
       </section>
       <hr class="hr_page" />
 
       <!-- Seção Sobre Nós -->
       <section class="aboutus" id="aboutus">
-        <h1 class="abt-l">{% trans "SOBRE NÓS" %}</h1>
+        <h1 class="abt-l"> SOBRE NÓS</h1>
         <p class="abt-r">
           Na
           <strong style="color: #ff3300">ForgeGenius_Tech</strong>, somos
